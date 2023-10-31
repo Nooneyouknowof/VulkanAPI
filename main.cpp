@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR
+// https://vulkan-tutorial.com
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
