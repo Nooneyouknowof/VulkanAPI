@@ -10,6 +10,6 @@ class FirstApp {
 
 		void run();
 	private:
-		LveWindow lveWindow{ WIDTH, HEIGHT, "Testing" };
+		LveWindow lveWindow{ WIDTH, HEIGHT, "Vulkan Rendering Engine" };
 };
 }
