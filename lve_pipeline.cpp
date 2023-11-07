@@ -35,11 +35,11 @@ namespace lve {
 		const std::string& vertFilepath, 
 		const std::string& fragFilepath, 
 		const PipelineConfigInfo& configInfo) {
-		auto vertCode = readFile(vertFilepath);
-		auto fragCode = readFile(fragFilepath);
+	auto vertCode = readFile(vertFilepath);
+	auto fragCode = readFile(fragFilepath);
 
-		std::cout << "Vertex Shader Code Size: " << vertCode.size() << '\n';
-		std::cout << "Fragment Shader Code Size: " << fragCode.size() << '\n';
+	std::cout << "Vertex Shader Code Size: " << vertCode.size() << '\n';
+	std::cout << "Fragment Shader Code Size: " << fragCode.size() << '\n';
 	}
 
 	void LvePipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) {
@@ -51,5 +51,11 @@ namespace lve {
 		if (vkCreateShaderModule(lveDevice.device(), &createInfo, nullptr, shaderModule) != VK_SUCCESS) {
 			throw std::runtime_error("Failed to create shader module");
 		}
+	}
+
+	PipelineConfigInfo LvePipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t height) {
+		PipelineConfigInfo configInfo{};
+
+		return configInfo;
 	}
 }
